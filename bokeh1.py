@@ -4,7 +4,7 @@ from bokeh.models import HoverTool
 import pandas as pd 
 import numpy as np
 
-df = pd.read_csv("daily_diagnostic_count.csv")
+df = pd.read_csv("data/daily_diagnostic_count.csv")
 
 arr_hist, edges = np.histogram(df[df.CORRECTNESS == 1]['NUM_QUESTIONS'], bins = 50)
 
@@ -17,7 +17,7 @@ src.data.keys()
 
 correct_question['f_interval'] = ['%d to %d minutes' % (left, right) for left, right in zip(correct_question['left'], correct_question['right'])]
 
-output_file("test_histogram.html")
+output_file("visualization/test_histogram.html")
 
 p = figure(plot_height = 600, plot_width = 600, 
            title = 'Histogram of Number of Correct Diagnostic Questions',

@@ -1,7 +1,7 @@
 # bokeh basics
 from bokeh.plotting import figure, output_file, show
 
-output_file("test.html")
+output_file("visualization/test.html")
 # Create a blank figure with labels
 p = figure(plot_width = 600, plot_height = 600, 
            title = 'Example Glyphs',
